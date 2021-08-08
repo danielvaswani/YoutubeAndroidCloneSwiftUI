@@ -10,7 +10,7 @@ import SwiftUI
 struct TopToolbar: View {
     var body: some View {
         VStack(spacing: 6){
-            Icons()
+            Icons(notifications:0)
             Divider()
                 .background(Color(#colorLiteral(red: 0.94892627, green: 0.9490850568, blue: 0.9489052892, alpha: 1)))
             Tags()
@@ -26,27 +26,49 @@ struct TopToolbar_Previews: PreviewProvider {
 }
 
 struct Icons: View {
+    let notifications : Int
+    
+    var moreThan9 : Bool { notifications > 9 }
+    var text : String { moreThan9 ? "9+" : "\(notifications)" }
+    
     var body: some View {
-        HStack(spacing:15) {
-            HStack(spacing:0){
-                Image(systemName:"play.rectangle.fill")
-                    .foregroundColor(.red)
-                    .cornerRadius(20)
-                Text("YouTube")
-                    .fontWeight(.semibold)
-            }
-            Spacer()
+        HStack(spacing:3) {
+            Image(systemName:"play.rectangle.fill").aspectRatio(contentMode: .fit)
+                .foregroundColor(.red)
+                .clipShape(RoundedRectangle(cornerRadius:10))
+            Text("YouTube")
+                .fontWeight(.semibold)
             
-            Image(systemName: "airplayvideo")
-                .font(Font.body.weight(.light))
-            Image(systemName :"bell")
-                .font(Font.body.weight(.light))
-            Image(systemName: "magnifyingglass")
+            Spacer()
+            HStack(spacing:15){
+                Image(systemName: "airplayvideo").aspectRatio(contentMode: .fit).frame(width:30,alignment: .leading)
                 
-                .font(Font.body.weight(.light))
-            Circle()
-                .frame(width: 18, height: 18)
+                ZStack(alignment : .topTrailing){
+                    Image(systemName :"bell").aspectRatio(contentMode: .fit)
+                    
+                    
+                        Text(notifications > 0 ? text : "")
+                            .font(.caption2)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.white)
+                            
+                            .frame(width: (moreThan9 ? 18.0:13.0))
+                            .background(notifications > 0 ? Color.red : Color.clear)
+                            
+                            .clipShape(Capsule())
+                            .offset(x: (moreThan9 ? 7.0 : 4.0), y: -2)
+                            .edgesIgnoringSafeArea(.all)
+                    
+                        
+                }.frame(width:30,alignment: .leading)
+                    
+                Image(systemName: "magnifyingglass").aspectRatio(contentMode: .fit).frame(width:30,alignment: .leading)
+
+                Circle().frame(width: 23)
+            }
         }
+        .font(Font.body.weight(.light))
+        .frame(height: 23)
         .padding(.horizontal)
     }
 }
