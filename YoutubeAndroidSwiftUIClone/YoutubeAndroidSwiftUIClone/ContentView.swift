@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         VStack {
-            TopToolbar()
+            TopToolbar(notifications:2, newVideos: true)
+            Spacer()
+            BottomNavbar()
         }
     }
 }
@@ -18,5 +22,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            
+            
     }
 }
