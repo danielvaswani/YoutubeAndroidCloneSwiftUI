@@ -12,6 +12,10 @@
 		F676E2FD26BE1400004D167D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F676E2FC26BE1400004D167D /* Assets.xcassets */; };
 		F676E30026BE1400004D167D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F676E2FF26BE1400004D167D /* Preview Assets.xcassets */; };
 		F676E30826BE1490004D167D /* TopToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F676E30726BE1490004D167D /* TopToolbar.swift */; };
+		F676E30A26BF71CA004D167D /* ContentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F676E30926BF71CA004D167D /* ContentItem.swift */; };
+		F6DA476126C257D600D3A8A8 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DA476026C257D600D3A8A8 /* HomePageView.swift */; };
+		F6DA476426C25A1600D3A8A8 /* ContentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DA476326C25A1600D3A8A8 /* ContentListView.swift */; };
+		F6DA476726C2805A00D3A8A8 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DA476626C2805A00D3A8A8 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		F676E2FF26BE1400004D167D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F676E30126BE1400004D167D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F676E30726BE1490004D167D /* TopToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopToolbar.swift; sourceTree = "<group>"; };
+		F676E30926BF71CA004D167D /* ContentItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentItem.swift; sourceTree = "<group>"; };
+		F6DA476026C257D600D3A8A8 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		F6DA476326C25A1600D3A8A8 /* ContentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentListView.swift; sourceTree = "<group>"; };
+		F6DA476626C2805A00D3A8A8 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +62,10 @@
 		F676E2F726BE13FF004D167D /* YoutubeAndroidSwiftUIClone */ = {
 			isa = PBXGroup;
 			children = (
+				F6DA476526C2804400D3A8A8 /* Models */,
+				F6DA476226C2583400D3A8A8 /* Navigation */,
+				F6DA476326C25A1600D3A8A8 /* ContentListView.swift */,
 				F676E2F826BE13FF004D167D /* YoutubeAndroidSwiftUICloneApp.swift */,
-				F676E2FA26BE13FF004D167D /* ContentView.swift */,
 				F676E30726BE1490004D167D /* TopToolbar.swift */,
 				F676E2FC26BE1400004D167D /* Assets.xcassets */,
 				F676E30126BE1400004D167D /* Info.plist */,
@@ -70,6 +80,24 @@
 				F676E2FF26BE1400004D167D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F6DA476226C2583400D3A8A8 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				F676E2FA26BE13FF004D167D /* ContentView.swift */,
+				F6DA476026C257D600D3A8A8 /* HomePageView.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		F6DA476526C2804400D3A8A8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F676E30926BF71CA004D167D /* ContentItem.swift */,
+				F6DA476626C2805A00D3A8A8 /* Post.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,8 +170,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F676E30826BE1490004D167D /* TopToolbar.swift in Sources */,
+				F676E30A26BF71CA004D167D /* ContentItem.swift in Sources */,
+				F6DA476426C25A1600D3A8A8 /* ContentListView.swift in Sources */,
 				F676E2FB26BE13FF004D167D /* ContentView.swift in Sources */,
 				F676E2F926BE13FF004D167D /* YoutubeAndroidSwiftUICloneApp.swift in Sources */,
+				F6DA476726C2805A00D3A8A8 /* Post.swift in Sources */,
+				F6DA476126C257D600D3A8A8 /* HomePageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
